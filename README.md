@@ -14,11 +14,11 @@ The cohe2hazel project tries to transform the Coherence operational and the cach
 To execute the transformation you need to run ConfigTransformer class with proper input parameters, which are paths to both configuration files: your operational xml (for example tangosol-coherence.xml) and cache xml (coherence-cache.xml ).
 
 ConfigTransformer main method performs 3 operations: 
-- transforms operational xml and creates hazelcast-network.xml as an output 
-- transforms cache xml and creates hazelcast-cache.xml as an output 
-- merges previously created xml files into single one and creates hazelcast.xml as an output, 
+- transforms operational xml and creates network.xml as an output 
+- transforms cache xml and creates cache.xml as an output 
+- merges previously created xml files into single one and creates output.xml as an output, 
 
-Generated hazelcast.xml file is a base for main Hazelcast configuration. For more information please refer to Hazelcast documentation - configuration section
+Generated output.xml file is a base for main Hazelcast configuration. For more information please refer to Hazelcast documentation - configuration section
 
 Currently, due to difference in the API of those two solutions it is not possible to automatically migrate the whole configuration so please be aware that the configuration will be migrated only in limited way. 
 
