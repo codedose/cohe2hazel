@@ -1,11 +1,11 @@
 # cohe2hazel
 Oracle Coherence to Hazelcast migration tool. 
 
-## Supports:
+## Supported Coherence and Hazelcast versions
 - Oracle Coherence 12.1.3-0-0
 - Hazelcast 3.6
 
-## Installation
+## Installation (maven)
 ```
 mvn package
 ```
@@ -13,13 +13,18 @@ mvn package
 ```
 java -jar cohe2hazel-1.0-SNAPSHOT.jar ${cache}.xml ${operational}.xml
 ```
+Example:
+```
+java -jar cohe2hazel-1.0-SNAPSHOT.jar ${coherence-cache}.xml ${tangosol-coherence}.xml
+```
+Output:
+Generated output.xml file is a base for main Hazelcast configuration.
 
 ## Runtime
 ```
 Java 1.7 
 ```
 
---
 ## Migrating Oracle Coherence configuration to Hazelcast 
 ***
 If your Coherence application is based on the XML configuration migration step can be partially automated using the cohe2hazel project.
