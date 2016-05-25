@@ -15,10 +15,10 @@ java -jar cohe2hazel-1.0-SNAPSHOT.jar ${cache}.xml ${operational}.xml
 ```
 Example:
 ```
-java -jar cohe2hazel-1.0-SNAPSHOT.jar ${coherence-cache}.xml ${tangosol-coherence}.xml
+java -jar cohe2hazel-1.0-SNAPSHOT.jar coherence-cache.xml tangosol-coherence.xml
 ```
 Output:
-Generated output.xml file is a base for main Hazelcast configuration.
+Generated **output.xml** file is a base for main Hazelcast configuration.
 
 ## Runtime
 ```
@@ -33,12 +33,12 @@ The cohe2hazel project tries to transform the Coherence operational and the cach
 
 ### Execution
 ***
-To execute the transformation you need to run cohe2hazel with proper input parameters, which are paths to both configuration files: your operational xml (for example tangosol-coherence.xml) and cache xml (coherence-cache.xml ).
+To execute the transformation you need to run cohe2hazel with proper input parameters, which are paths to both configuration files: your Coherence operational xml (for example *tangosol-coherence.xml*) and cache xml (*coherence-cache.xml*).
 
 ConfigTransformer main method performs 3 operations: 
-- transforms operational xml and creates network.xml as an output,
-- transforms cache xml and creates cache.xml as an output,
-- merges previously created xml files into single one and creates output.xml as an output.
+- Transforms **Coherence operational xml** and creates **network.xml** as an output,
+- Transforms **Coherence cache xml** and creates **cache.xml** as an output,
+- Merges previously created xml files into a single **output.xml**.
 
 Generated output.xml file is a base for main Hazelcast configuration. For more information please refer to Hazelcast documentation - configuration section.
 
