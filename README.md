@@ -1,17 +1,33 @@
 # cohe2hazel
-Coherence to Hazelcast configuration migrating tool
+Oracle Coherence to Hazelcast configuration migrating tool. 
 
+## Supports:
+- Oracle Coherence 12.1.3-0-0
+- Hazelcast 3.6
 
+## Installation
+```
+mvn package
+```
+## Usage
+```
+java -jar cohe2hazel-1.0-SNAPSHOT.jar ${cache}.xml ${operational}.xml
+```
+
+## Runtime
+```
+Java 1.7 
+```
 
 --
-## Migrating from Oracle Coherence to Hazelcast
-### Migrating configuration
+## Description
+### Migrating from Oracle Coherence configuration to Hazelcast 
 ***
 If your Coherence application is based on the XML configuration migration step can be partially automated using the cohe2hazel project.
 
 The cohe2hazel project tries to transform the Coherence operational and the cache configuration files to the hazelcast.xml (hazelcast-config-3.6) configuration file. During the transformation a user’s operational file is transformed to the Hazelcast network section and a user’s cache file to the hazelcast map section. This transformation is especially helpful when your cache configuration contains a lot of cache definitions (also a parameterized one) . 
 
-To execute the transformation you need to run ConfigTransformer class with proper input parameters, which are paths to both configuration files: your operational xml (for example tangosol-coherence.xml) and cache xml (coherence-cache.xml ).
+To execute the transformation you need to run cohe2hazel with proper input parameters, which are paths to both configuration files: your operational xml (for example tangosol-coherence.xml) and cache xml (coherence-cache.xml ).
 
 ConfigTransformer main method performs 3 operations: 
 - transforms operational xml and creates network.xml as an output 
