@@ -85,6 +85,6 @@ migrating / resolving cache parameters:
 Currently there is no way to automatically migrate Coherence services. A Coherence cache timeouts/threads count and other services parameters should be manually merged and moved to hazelcast client configuration. 
 
 
-### Contact
+### Questions or comments? Contact us.
 ***
 If you are interested in any changes to this tool or practical challenges in migrating Oracle Coherence projects to Hazelcast you may contact us at contact@codedose.com
