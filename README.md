@@ -27,7 +27,7 @@ Java 1.7
 
 ## Migrating Oracle Coherence configuration to Hazelcast 
 ***
-If your Coherence application is based on the XML configuration migration step can be partially automated using the cohe2hazel project.
+If your Coherence application is based on XML configuration, the  migration can be partially automated using the cohe2hazel project.
 
 The cohe2hazel project tries to transform the Coherence operational and the cache configuration files to the hazelcast.xml (hazelcast-config-3.6) configuration file using XSLT processor. During the transformation the Coherence operational config file is transformed to the Hazelcast network section and the Coherence cache config file to the hazelcast map section. This transformation is especially helpful when your cache configuration contains a lot of cache definitions (also parameterized ones) . 
 
